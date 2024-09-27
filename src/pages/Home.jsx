@@ -8,7 +8,7 @@ export function HomePage() {
     return (
         <>
             <header>
-                <img className="img-fluid mb-3" src={logoAdare} alt="Adare-Logo" />
+                <img className="img-fluid mb-3 img-logo" src={logoAdare} alt="Adare-Logo" />
             </header>
             <NavBar /> {/* Componente NavBar */}
             <main>
