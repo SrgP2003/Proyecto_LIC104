@@ -25,6 +25,7 @@
 }
 .nv-lg-items ul li a:hover {
     transform: scale(1.05);
+    cursor: pointer;
 }
 .nv-lg-items {
     backdrop-filter: blur(0.3em);
