@@ -1,0 +1,14 @@
+.head-lg-section{
+    background-color: rgb(39, 39, 39);
+    color: #fff;
+    padding: 2rem;
+}
+.head-lg-section h1{
+    font-family: Whisper;
+    font-size: 4.5em;
+}
+.head-lg-section p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular';
+    font-size: 1.1em;
+    font-style: italic;
+}

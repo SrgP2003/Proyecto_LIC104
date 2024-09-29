@@ -1,8 +1,8 @@
 /* Componente de carta*/
-.card {
+.card-md-section {
     box-sizing: border-box;
     width: 100%;
-    height: 100%;
+    height: 89%;
     background: rgba(255, 255, 255, 0.58);
     border: 1px solid rgb(175, 173, 173);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.22);
@@ -25,9 +25,9 @@
 }
 .img-dish{
     width: 100%;
-    height: 17em;
+    height: 100%;
 }
 .row-info{
     font-family: Whisper;
-    font-size: 2.5em;
+    font-size: 1.4em;
 }
