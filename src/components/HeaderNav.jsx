@@ -1,6 +1,7 @@
 import "../assets/css/Header.css"
 import logoAdare from "../assets/images/adareLogo.png"
 import { useNavigate } from "react-router-dom"
+import "../assets/css/HeaderNav.css"
 
 export default function HeaderNav({title}) {
     const navigateHeader = useNavigate();
@@ -9,7 +10,7 @@ export default function HeaderNav({title}) {
     const handleClickContact = () => {navigateHeader("/contact")}
     return (
         <>
-            <header className="container p-3">
+            <div className="container headerNav-container">
                 <nav className="navbar navbar-dark bg-dark fixed-top">
                     <div className="container p-3">
                         <h1 className="navbar-brand h1" href="#">{title}</h1>
@@ -37,7 +38,7 @@ export default function HeaderNav({title}) {
                         </div>
                     </div>
                 </nav>
-            </header>
+            </div>
 
         </>
     )

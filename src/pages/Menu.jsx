@@ -1,5 +1,6 @@
 import "../assets/css/Menu.css"
-import { MenuSection } from "../components/Menu-Section"
+import { MenuItem } from "../components/MenuTools"
+import { MenuSection } from "../components/MenuTools"
 import FooterN from "../components/footer"
 import HeaderNav from "../components/HeaderNav"
 import "bootstrap/dist/css/bootstrap.min.css"
@@ -20,68 +21,94 @@ export function Menu() {
         <>
             <main>
                 <header>
-                    <HeaderNav title={'Menú'}/>
+                    <HeaderNav title={'Menú'} />
                 </header>
-                <section className="container-section container-fluid ">
-                    <article className="row d-flex justify-content-center g-0">  {/* Fila #1*/}
-                        <div className="col-md-6 col-lg-4">
-                            <MenuSection
-                                urlImg={Insalati}
-                                sectionName={"Insalati"}
-                            />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <MenuSection
-                                urlImg={Crostini}
-                                sectionName={"Pane E Crostini"}
-                            />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <MenuSection
-                                urlImg={Zuppe}
-                                sectionName={"Zuppe"}
-                            />
-                        </div>
-                    </article>
 
+                {/*Seccion de ensaladas */}
+                <MenuSection titleSection={"Antipasti e insalati"} description={"Todas las ensaladas creadas al estilo de Italia y sus alrededores"}>
+                    <div id="carousel-items-dish" className="carousel carousel-dark slide">
+                        <div class="carousel-indicators pt-3">
+                            <button type="button" data-bs-target="#carousel-items-dish" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel-items-dish" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel-items-dish" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div className="carousel-inner">
+                            <div className="carousel-item active carousel-item-1" data-bs-interval="10000">
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <MenuItem urlImg={Pasta} sectionName={'Pasta'} />
+                                        </div>
+                                        <div className="col-6">
+                                            <MenuItem urlImg={Pasta} sectionName={'Pasta'} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="carousel-item active carousel-item-2" data-bs-interval="2000" >
+                                <div className="container">
 
-                    <article className="row d-flex justify-content-center g-0">  {/* Fila #2*/}
-                        <div className="col-md-6 col-lg-4">
-                            <MenuSection
-                                urlImg={Pizza}
-                                sectionName={"Pizzas"}
-                            />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <MenuSection
-                                urlImg={Pasta}
-                                sectionName={"Pasta"}
-                            />
-                        </div>
-                        <div className="col-md-6 col-lg-4">
-                            <MenuSection
-                                urlImg={Rissoto}
-                                sectionName={"Rissoto"}
-                            />
-                        </div>
-                    </article>
+                                </div>
+                            </div>
+                            <div className="carousel-item active carousel-item-3">
+                                <div className="container">
 
+                                </div>
+                            </div>
+                        </div>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carousel-items-dish" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carousel-items-dish" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </MenuSection>
 
-                    <article className="row d-flex justify-content-center g-0">  {/* Fila #3*/}
-                        <div className="col-md-6 col-lg-5 col-lg-offset">
-                            <MenuSection
-                                urlImg={Spiatti}
-                                sectionName={"Secondi Piatti"}
-                            />
+                {/*Seccion de Pan */}
+                <MenuSection titleSection={"Pane E Crostini"} description={"Pancito italiano mi rei"}>
+                    <div id="carousel-items-dish" className="carousel carousel-dark slide">
+                        <div class="carousel-indicators pt-3">
+                            <button type="button" data-bs-target="#carousel-items-dish" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel-items-dish" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel-items-dish" data-bs-slide-to="2" aria-label="Slide 3"></button>
                         </div>
-                        <div className="col-md-6 col-lg-5">
-                            <MenuSection
-                                urlImg={Dolci}
-                                sectionName={"Dolci"}
-                            />
+                        <div className="carousel-inner">
+                            <div className="carousel-item active carousel-item-1" data-bs-interval="10000">
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-6">
+                                            <MenuItem urlImg={Pasta} sectionName={'Pasta'} />
+                                        </div>
+                                        <div className="col-6">
+                                            <MenuItem urlImg={Pasta} sectionName={'Pasta'} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="carousel-item active carousel-item-2" data-bs-interval="2000" >
+                                <div className="container">
+
+                                </div>
+                            </div>
+                            <div className="carousel-item active carousel-item-3">
+                                <div className="container">
+
+                                </div>
+                            </div>
                         </div>
-                    </article>
-                </section>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carousel-items-dish" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carousel-items-dish" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </MenuSection>
             </main>
             <FooterN />
         </>
