@@ -1,0 +1,8 @@
+.navbar-brand{
+    font-size: 2rem;
+    font-family: system-ui, Whisper;
+}
+.nav-link-head{
+    font-size: 1.3em;
+    cursor: pointer;
+}

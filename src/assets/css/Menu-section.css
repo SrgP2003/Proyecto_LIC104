@@ -1,22 +1,33 @@
-img {
+/* Componente de carta*/
+.card {
+    box-sizing: border-box;
     width: 100%;
-    border-radius: 25px;
-}
-
-.card-md-section {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgb(175, 173, 173);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.22);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    text-align: center;
     cursor: pointer;
+    transition: all 0.5s;
+    user-select: none;
+    color: black;
+}
+
+.card:hover {
+    border: 1px solid rgb(114, 114, 114);
+    transform: scale(1.03);
+}
+
+.card:active {
+    transform: scale(0.95) rotateZ(1.2deg);
+}
+.img-dish{
     width: 100%;
-    border: 1px solid rgb(224, 223, 223);
-    border-radius: .2em;
-    box-shadow: 0 0 1em gray;
-    transition: transform 0.6s ease;
+    height: 17em;
 }
-
-.card-md-section:hover {
-    transform: scale(1.07);
-}
-
-.card-dish-text {
+.row-info{
     font-family: Whisper;
-    font-size: 3.4em;
+    font-size: 2.5em;
 }

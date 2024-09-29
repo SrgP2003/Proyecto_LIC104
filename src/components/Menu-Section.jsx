@@ -1,13 +1,15 @@
 import "../assets/css/Menu-section.css"
 
-export function MenuSection({urlImg, sectionName, altImg}) {
+export function MenuSection({ urlImg, sectionName, altImg }) {
     return (
-        <div className="container-fluid">
+        <div className="container">
             <section className="card mt-3 mb-3 card-md-section">
                 <article className="card-body">
-                    <img clasName="img-fluid" src={urlImg} alt={altImg} />
+                    <div className="row">
+                        <img className="img-dish img-fluid" src={urlImg} alt={altImg} />
+                    </div>
                     <hr />
-                    <div className="row text-center">
+                    <div className="row row-info">
                         <p className="card-dish-text">{sectionName}</p>
                     </div>
                 </article>

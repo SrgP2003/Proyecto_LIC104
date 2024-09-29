@@ -1,16 +1,16 @@
 import NavBar from "../components/navbar";
 import "../assets/css/Home.css"
-import "bootstrap/dist/css/bootstrap.min.css"
 import logoAdare from "../assets/images/adareLogo.png"
 import { useNavigate } from "react-router-dom";
 import FooterN from "../components/footer";
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/js/bootstrap.bundle.js"
+
 
 export function HomePage() {
 
     const navigate = useNavigate(); {/*Uso de hook navegar hacia el menu*/ }
-    const handleClick = () => {
-        navigate('/menu'); {/*Funcion asignada al boton para navegar hacia el menu*/ }
-    }
+    const handleClick = () => {navigate('/menu'); {/*Funcion asignada al boton para navegar hacia el menu*/ }}
 
     return (
         <>
@@ -18,7 +18,7 @@ export function HomePage() {
         <header>
                 <img className="img-fluid mb-3 img-logo" src={logoAdare} alt="Adare-Logo" />
             </header>
-            <NavBar /> {/* Componente NavBar */}
+            <NavBar colorEl={'#fff'}/> {/* Componente NavBar */}
             <main>
                 <h2 className="h2-md-title p-1 h2">¡Un ristorante da gustare e condividere!</h2>
                 <section className="section-lg-home">
