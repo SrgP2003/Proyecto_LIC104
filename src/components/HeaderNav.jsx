@@ -13,7 +13,7 @@ export default function HeaderNav({title}) {
             <div className="container headerNav-container">
                 <nav className="navbar navbar-dark bg-dark fixed-top">
                     <div className="container p-3">
-                        <h1 className="navbar-brand h1" href="#">{title}</h1>
+                        <a className="navbar-brand h1" href="#">{title}</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>

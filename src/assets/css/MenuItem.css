@@ -2,7 +2,7 @@
 .card-md-section {
     box-sizing: border-box;
     width: 100%;
-    height: 89%;
+    height: 91%;
     background: rgba(255, 255, 255, 0.58);
     border: 1px solid rgb(175, 173, 173);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.22);
@@ -14,20 +14,35 @@
     user-select: none;
     color: black;
 }
-
-.card:hover {
-    border: 1px solid rgb(114, 114, 114);
-    transform: scale(1.03);
-}
-
 .card:active {
-    transform: scale(0.95) rotateZ(1.2deg);
+    transform: scale(0.98);
 }
 .img-dish{
     width: 100%;
     height: 100%;
+    border-radius: 10px;
 }
-.row-info{
-    font-family: Whisper;
-    font-size: 1.4em;
+
+.p-dish-section{
+    font-family: 'Lucida-Sans';
+    font-weight: bold;
+    font-size: 1.5em;
 }
+.p-dish-description{
+    font-family: Verdana, Geneva;
+}
+.card-dish-price{
+    font-family: 'Whisper';
+    font-size: 1.9em;
+    font-weight: bold;
+}
+
+@media(max-width: 768px){
+    .p-dish-section{
+        font-size: 1.4em;  
+    }
+    .p-dish-description{
+        font-size: .9em;  
+    }
+}
+
