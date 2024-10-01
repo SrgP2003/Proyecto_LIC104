@@ -46,9 +46,9 @@ export function Menu() {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Pasta gratinada con vegetales y anchoas'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'salsa boloniesa, carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
                                                 cart={buttonCart}
                                             />
