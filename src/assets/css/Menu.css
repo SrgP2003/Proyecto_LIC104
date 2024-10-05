@@ -1,0 +1,12 @@
+.carousel-control-prev, .carousel-control-next{
+    height: 65%;
+}
+.btn-cart{
+    border-radius: 0;
+    height: 2em;
+}
+.container-cart{
+    top: 5em;
+    position: sticky;
+    z-index: 5;
+}

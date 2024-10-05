@@ -1,7 +1,32 @@
 import "../assets/css/MenuItem.css"
 import "../assets/css/MenuSection.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faPlus } from "@fortawesome/free-solid-svg-icons"
+import { faMinus } from "@fortawesome/free-solid-svg-icons"
+import { useState } from "react"
 
-export function MenuItem({ urlImg, altImg, sectionName, aboutDish, price, cart }) {
+export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, addToCart }) {
+    const [cantidad, setCantidad] = useState(0);
+    const increment = () => {
+        (cantidad > 9) ? setCantidad(cantidad) : setCantidad(cantidad + 1) //Funcion para incrementar platillo
+    }
+    const decrement = () => {
+        (cantidad < 1) ? setCantidad(cantidad * 0) : setCantidad(cantidad - 1) //Funcion para decrementar platillo
+    }
+
+    const handleAddToCart = () => {
+        if (cantidad > 0){
+            const item = {
+                id,
+                sectionName,
+                price,
+                cantidad
+            }
+            addToCart(item);
+            setCantidad(0);
+        }
+    }
+
     return (
         <article className="card mt-3 mb-3 card-md-section">
             <div className="card-body">
@@ -17,7 +42,26 @@ export function MenuItem({ urlImg, altImg, sectionName, aboutDish, price, cart }
                 <hr />
                 <div className="row row-options text-center">
                     <div className="col-12 col-cart">
-                        {cart}
+                        <div className="row row-cartButton">
+                            <div className="col-12">
+                                <button className="btn btn-dark" onClick={handleAddToCart}>Añadir al carrito</button>
+                            </div>
+                        </div>
+                        <div className="row row-num-item pt-3">
+                            <div className="col-4 text-end">
+                                <button className="btn btn-outline-dark btn-sm" onClick={decrement}>
+                                    <FontAwesomeIcon icon={faMinus} size="sm"/>
+                                </button>
+                            </div>
+                            <div className="col-4">
+                                <p className="num-md-item">{cantidad}</p>
+                            </div>
+                            <div className="col-4 text-start">
+                                <button className="btn btn-outline-dark btn-sm" onClick={increment}>
+                                    <FontAwesomeIcon icon={faPlus} size="sm"/>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-12 col-price">
                         <p className="card-dish-price">{price}</p>
@@ -32,7 +76,7 @@ export function MenuSection({ titleSection, children, description }) {
     return (
         <>
             <article>
-                <header className="head-lg-section">
+                <header className="head-lg-section text-center">
                     <h1 className="h1">{titleSection}</h1>
                     <h5>{description}</h5>
                 </header>

@@ -3,16 +3,16 @@ import logoAdare from "../assets/images/adareLogo.png"
 import { useNavigate } from "react-router-dom"
 import "../assets/css/HeaderNav.css"
 
-export default function HeaderNav({title}) {
+export default function HeaderNav({ title }) {
     const navigateHeader = useNavigate();
-    const handleClickInicio = () => {navigateHeader("/")}
-    const handleClickAbout = () => {navigateHeader("/about")}
-    const handleClickContact = () => {navigateHeader("/contact")}
+    const handleClickInicio = () => { navigateHeader("/") }
+    const handleClickAbout = () => { navigateHeader("/about") }
+    const handleClickContact = () => { navigateHeader("/contact") }
     return (
         <>
             <div className="container headerNav-container">
                 <nav className="navbar navbar-dark bg-dark fixed-top">
-                    <div className="container p-3">
+                    <div className="container p-1">
                         <a className="navbar-brand h1" href="#">{title}</a>
                         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
