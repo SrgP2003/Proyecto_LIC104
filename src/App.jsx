@@ -52,8 +52,7 @@ export default function App() {
                     return null;
                 }
                 return cartItem; // Devolver el ítem si no coincide
-            })
-                .filter(cartItem => cartItem !== null);
+            }).filter(cartItem => cartItem !== null);
         });
     };
 
