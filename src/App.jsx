@@ -3,6 +3,7 @@ import { HomePage } from "./pages/Home";
 import { Menu } from "./pages/Menu";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
+import PaymentMethods from "./components/Payment";
 import Cart from "./components/cart";
 import { useState, useEffect } from "react";
 
@@ -59,10 +60,12 @@ export default function App() {
     //Funcion para remover todos los items del carrito
     const handleRemoveAll = (itemId) => {
         setCart((prevItems) => {
-            if(prevItems.length)
+            if (prevItems.length)
                 return prevItems.filter(item => item.id !== itemId)
         })
     }
+    const convertPrice = (priceC) => { return +priceC.split('').slice(0, -1).join('') } //Precio de los items
+    const totalPrice = cart.reduce((acum, item) => acum + convertPrice(item.price) * item.cantidad, 0); //Precio total de todos los items
     return (
         <>
             <Router>  {/*Seccion correspondiente para poder navegar a diferentes paginas o componentes */}
@@ -71,7 +74,8 @@ export default function App() {
                     <Route path="/menu" element={<Menu addToCart={agregarCart} />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
-                    <Route path="/cart" element={<Cart cart={cart} removeItem={handleRemoveItem} removeAll={handleRemoveAll}/>} />
+                    <Route path="/cart" element={<Cart cart={cart} removeItem={handleRemoveItem} removeAll={handleRemoveAll} totalPrice={totalPrice} convertPrice={convertPrice} />} />
+                    <Route path="/payment" element={<PaymentMethods cart={cart} convertPrice={convertPrice} totalPrice={totalPrice} />} />
                 </Routes>
             </Router>
         </>

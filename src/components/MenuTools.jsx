@@ -1,5 +1,7 @@
 import "../assets/css/MenuItem.css"
 import "../assets/css/MenuSection.css"
+import "bootstrap/dist/js/bootstrap.bundle.js"
+import { OverlayTrigger, Popover } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { faMinus } from "@fortawesome/free-solid-svg-icons"
@@ -7,6 +9,9 @@ import { useState } from "react"
 
 export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, addToCart }) {
     const [cantidad, setCantidad] = useState(0);
+    const [show, setShow] = useState(false);
+    const [target, setTarget] = useState(null);
+
     const increment = () => {
         (cantidad > 9) ? setCantidad(cantidad) : setCantidad(cantidad + 1) //Funcion para incrementar platillo
     }
@@ -14,8 +19,8 @@ export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, ad
         (cantidad < 1) ? setCantidad(cantidad * 0) : setCantidad(cantidad - 1) //Funcion para decrementar platillo
     }
 
-    const handleAddToCart = () => {
-        if (cantidad > 0){
+    const handleAddToCart = (e) => {
+        if (cantidad > 0) {
             const item = {
                 id,
                 sectionName,
@@ -24,11 +29,23 @@ export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, ad
             }
             addToCart(item);
             setCantidad(0);
+            setShow(!show);
+            setTarget(e.target);
         }
     }
+    const clickAfuera = () => {
+        setShow(false);
+    }
+    const popoverShow = (
+        <Popover id="popover-succed">
+            <Popover.Body className="text-center">
+                Los productos se han agregado correctamente al carrito.
+            </Popover.Body>
+        </Popover>
+    );
 
     return (
-        <article className="card mt-3 mb-3 card-md-section">
+        <section className="card mt-3 mb-3 card-md-section">
             <div className="card-body">
                 <div className="row row-info d-flex justify-content-center">
                     <div className="col-sm-12 col-md-5 col-lg-5">
@@ -44,13 +61,15 @@ export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, ad
                     <div className="col-12 col-cart">
                         <div className="row row-cartButton">
                             <div className="col-12">
-                                <button className="btn btn-dark" onClick={handleAddToCart}>Añadir al carrito</button>
+                                <OverlayTrigger trigger={'click'} placement={'bottom'} overlay={popoverShow} show={show} rootClose onToggle={clickAfuera}>
+                                    <button className="btn btn-dark" onClick={handleAddToCart}>Añadir al carrito</button>
+                                </OverlayTrigger>
                             </div>
                         </div>
                         <div className="row row-num-item pt-3">
                             <div className="col-4 text-end">
                                 <button className="btn btn-outline-dark btn-sm" onClick={decrement}>
-                                    <FontAwesomeIcon icon={faMinus} size="sm"/>
+                                    <FontAwesomeIcon icon={faMinus} size="sm" />
                                 </button>
                             </div>
                             <div className="col-4">
@@ -58,7 +77,7 @@ export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, ad
                             </div>
                             <div className="col-4 text-start">
                                 <button className="btn btn-outline-dark btn-sm" onClick={increment}>
-                                    <FontAwesomeIcon icon={faPlus} size="sm"/>
+                                    <FontAwesomeIcon icon={faPlus} size="sm" />
                                 </button>
                             </div>
                         </div>
@@ -68,7 +87,7 @@ export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, ad
                     </div>
                 </div>
             </div>
-        </article>
+        </section>
     )
 }
 
