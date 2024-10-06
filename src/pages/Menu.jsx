@@ -1,16 +1,30 @@
 import "../assets/css/Menu.css"
 import { MenuItem } from "../components/MenuTools"
 import { MenuSection } from "../components/MenuTools"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
+import { useNavigate } from "react-router-dom"
 import FooterN from "../components/footer"
 import HeaderNav from "../components/HeaderNav"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.js"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
-import { useNavigate } from "react-router-dom"
+
 
 /*Imagenes para cada seccion */
 import Pasta from "../assets/images/Pasta.png"
+
+import Funghi from "../assets/images/Risotto/FUNGHI.jpg"
+import Capresse from "../assets/images/Risotto/CAPRESE1.png"
+import Ossobuco from "../assets/images/Risotto/OSSOBUCO.jpg"
+import Risotto_Nero from "../assets/images/Risotto/Risotto_nero.jpg"
+
+import CanolliN from "../assets/images/Dolci/CANNOLLI.png"
+import Profiterol from "../assets/images/Dolci/PROFITEROL.JPG"
+import Piemontesa from "../assets/images/Dolci/caprese2.jpg"
+import Pannacota from "../assets/images/Dolci/PANNACOTTA.jpg"
+import PizzaNut from "../assets/images/Dolci/pizza_nutella1.png"
+import GelatoM from "../assets/images/Dolci/GELATO_MONTEROSSO.jpg"
+import Tiramisu from "../assets/images/Dolci/TIRAMISu.jpg"
 
 export function Menu({ addToCart }) {
     const goToCart = useNavigate();
@@ -771,8 +785,8 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Fungui'}
+                                                urlImg={Funghi}
+                                                sectionName={'Funghi'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Arroz arborio cremoso con hongos y parmesano Reggiano'}
                                                 price={'16$'}
@@ -782,7 +796,7 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={Capresse}
                                                 sectionName={'Caprese'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Arroz arborio cremoso con tomates y mozzarella'}
@@ -799,7 +813,7 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={Ossobuco}
                                                 sectionName={'Ossobuco'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Arroz arborio cremoso con parmesano y corte de red estofado en sus jugos'}
@@ -810,7 +824,7 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={Risotto_Nero}
                                                 sectionName={'Rissoto Nero'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Arroz arborio cremoso calamares fritos, alioli de lima y tinta de calamar'}
@@ -850,7 +864,7 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={CanolliN}
                                                 sectionName={'Cannolli Nutella'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Cono crocante relleno de nutella y crema pastelera'}
@@ -861,7 +875,7 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={Profiterol}
                                                 sectionName={'Profiterol Pistacchio'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Gelato de pistacchio, crumble de pistacchio, salsa tibia de chocolate blanco y pistacchio'}
@@ -878,7 +892,7 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={Piemontesa}
                                                 sectionName={'Torta Piemontesa'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Torta de chocolate, avellanas, ganache de gianduia'}
@@ -889,7 +903,7 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={Pannacota}
                                                 sectionName={'Pannacota de frutos rojos'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Flan italiano de crema de leche con frutos rojos'}
@@ -906,7 +920,7 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={PizzaNut}
                                                 sectionName={'Pizza de nutella'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Masa de cacao cons marshmallow, ricotta dulce y tierra de oreo'}
@@ -917,7 +931,7 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={GelatoM}
                                                 sectionName={'Gelato Monterosso'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Helado hecho en casa de nocciola y nutella, panna, galleta de barquilla hecha en casa'}
@@ -934,7 +948,7 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
+                                                urlImg={Tiramisu}
                                                 sectionName={'Tiramisú'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Tradicional dulce de soletillas con café, cacao y mascarpone'}
