@@ -8,6 +8,18 @@ import "bootstrap/dist/js/bootstrap.bundle.js"
 
 /*Imagenes para cada seccion */
 import Pasta from "../assets/images/Pasta.png"
+import Risotto_nero from "../assets/images/Risotto_nero.jpg"
+import caprese from "../assets/images/CAPRESE1.png"
+import Ossobuco from "../assets/images/OSSOBUCO.jpg"
+import Funghi from "../assets/images/FUNGHI.jpg"
+import Tiramisu from "../assets/images/TIRAMISu.jpg"
+import Gelato_monterosso from  "../assets/images/GELATO_MONTEROSSO.jpg"
+import pizza_nutella from "../assets/images/pizza_nutella1.png"
+import pannacotta from "../assets/images/PANNACOTTA.jpg"
+import piemontesa  from "../assets/images/caprese2.jpg"
+import profiterol from "../assets/images/PROFITEROL.jpg"
+import cannolli from "../assets/images/CANNOLLI.png"
+ 
 
 export function Menu() {
     const buttonCart = <button className="btn btn-dark">Añadir al carrito</button>
@@ -714,21 +726,21 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Funghi}
+                                                sectionName={'FUNGHI'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'ARROZ ARBORIO CREMOSO CON HONGOS Y PARMESANO REGGIANO​'}
+                                                price={'16$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={caprese}
+                                                sectionName={'CAPRESE'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'ARROZ ARBORIO CREMOSO CON TOMATES Y MOZZARELLA'}
+                                                price={'15$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
@@ -740,21 +752,21 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Ossobuco}
+                                                sectionName={'OSSOBUCO'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'ARROZ ARBORIO CREMOSO CON PARMESANO Y CORTE DE RES ESTOFADO EN SUS JUGOS'}
+                                                price={'14$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Risotto_nero}
+                                                sectionName={'RISOTTO NERO'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'ARROZ ARBORIO CREMOSO CON CALAMARES FRITOS, ALIOLI DE LIMA Y TINTA DE CALAMAR'}
+                                                price={'15$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
@@ -789,21 +801,21 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Tiramisu}
+                                                sectionName={'TIRAMISÚ'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'DULCE DE SOLETILLAS “SAVOIARDI” CON CAFÉ, CACAO Y 100% MASCARPONE'}
+                                                price={'6$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Gelato_monterosso}
+                                                sectionName={'GELATO MONTEROSSO'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'HELADO HECHO EN CASA DE NOCCIOLA Y NUTELLA'}
+                                                price={'8$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
@@ -815,21 +827,21 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={pizza_nutella}
+                                                sectionName={'PIZZA DE NUTELLA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'MASA DE CACAO CON MARSHMALLOW, RICOTTA DULCE Y TIERRA DE OREO'}
+                                                price={'7$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={pannacotta}
+                                                sectionName={'PANNACOTTA DE FRUTOS ROJOS'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'FLAN ITALIANO DE CREMA DE LECHE CON FRUTOS ROJOS​'}
+                                                price={'6$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
@@ -841,21 +853,21 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={piemontesa}
+                                                sectionName={'TORTA PIEMONTESA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'TORTA DE CHOCOLATE, AVELLANAS, GANACHE DE GIANDUIA​'}
+                                                price={'9$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={profiterol}
+                                                sectionName={'PROFITEROL PISTACCHIO'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'GELATO DE PISTACCHIO, CRUMBLE DE PISTACCHIO, SALSA TIBIA DE CHOCOLATE BLANCO Y PISTACCHIO'}
+                                                price={'11$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
@@ -867,11 +879,11 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={cannolli}
+                                                sectionName={'CANNOLLI NUTELLA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'CONO CROCANTE RELLENO DE NUTELLA Y CREMA PASTELERA​'}
+                                                price={'5$'}
                                                 cart={buttonCart}
                                             />
                                         </div>
