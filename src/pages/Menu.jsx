@@ -11,18 +11,6 @@ import { useNavigate } from "react-router-dom"
 
 /*Imagenes para cada seccion */
 import Pasta from "../assets/images/Pasta.png"
-import Risotto_nero from "../assets/images/Risotto_nero.jpg"
-import caprese from "../assets/images/CAPRESE1.png"
-import Ossobuco from "../assets/images/OSSOBUCO.jpg"
-import Funghi from "../assets/images/FUNGHI.jpg"
-import Tiramisu from "../assets/images/TIRAMISu.jpg"
-import Gelato_monterosso from  "../assets/images/GELATO_MONTEROSSO.jpg"
-import pizza_nutella from "../assets/images/pizza_nutella1.png"
-import pannacotta from "../assets/images/PANNACOTTA.jpg"
-import piemontesa  from "../assets/images/caprese2.jpg"
-import profiterol from "../assets/images/PROFITEROL.jpg"
-import cannolli from "../assets/images/CANNOLLI.png"
- 
 
 export function Menu({ addToCart }) {
     const goToCart = useNavigate();
@@ -785,16 +773,11 @@ export function Menu({ addToCart }) {
                                             <MenuItem
                                                 urlImg={Pasta}
                                                 sectionName={'Fungui'}
-                                                urlImg={Funghi}
-                                                sectionName={'FUNGHI'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Arroz arborio cremoso con hongos y parmesano Reggiano'}
                                                 price={'16$'}
                                                 addToCart={addToCart}
                                                 id={44}
-                                                aboutDish={'ARROZ ARBORIO CREMOSO CON HONGOS Y PARMESANO REGGIANO​'}
-                                                price={'16$'}
-                                                cart={buttonCart}
                                             />
                                         </div>
                                         <div className="col-6">
