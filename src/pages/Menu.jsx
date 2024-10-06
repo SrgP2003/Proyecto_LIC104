@@ -772,10 +772,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Fungui'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Arroz arborio cremoso con hongos y parmesano Reggiano'}
+                                                price={'16$'}
                                                 addToCart={addToCart}
                                                 id={44}
                                             />
@@ -783,10 +783,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Caprese'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Arroz arborio cremoso con tomates y mozzarella'}
+                                                price={'15$'}
                                                 addToCart={addToCart}
                                                 id={45}
                                             />
@@ -800,10 +800,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Ossobuco'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Arroz arborio cremoso con parmesano y corte de red estofado en sus jugos'}
+                                                price={'14$'}
                                                 addToCart={addToCart}
                                                 id={46}
                                             />
@@ -811,9 +811,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Rissoto Nero'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Arroz arborio cremoso calamares fritos, alioli de lima y tinta de calamar'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={47}
@@ -851,10 +851,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Cannolli Nutella'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Cono crocante relleno de nutella y crema pastelera'}
+                                                price={'5$'}
                                                 addToCart={addToCart}
                                                 id={48}
                                             />
@@ -862,10 +862,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Profiterol Pistacchio'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Gelato de pistacchio, crumble de pistacchio, salsa tibia de chocolate blanco y pistacchio'}
+                                                price={'11$'}
                                                 addToCart={addToCart}
                                                 id={49}
                                             />
@@ -879,10 +879,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Torta Piemontesa'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Torta de chocolate, avellanas, ganache de gianduia'}
+                                                price={'9$'}
                                                 addToCart={addToCart}
                                                 id={50}
                                             />
@@ -890,10 +890,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Pannacota de frutos rojos'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Flan italiano de crema de leche con frutos rojos'}
+                                                price={'6$'}
                                                 addToCart={addToCart}
                                                 id={51}
                                             />
@@ -907,10 +907,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Pizza de nutella'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Masa de cacao cons marshmallow, ricotta dulce y tierra de oreo'}
+                                                price={'7$'}
                                                 addToCart={addToCart}
                                                 id={52}
                                             />
@@ -918,10 +918,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Gelato Monterosso'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Helado hecho en casa de nocciola y nutella, panna, galleta de barquilla hecha en casa'}
+                                                price={'8$'}
                                                 addToCart={addToCart}
                                                 id={53}
                                             />
@@ -935,10 +935,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                sectionName={'Tiramisú'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Tradicional dulce de soletillas con café, cacao y mascarpone'}
+                                                price={'6$'}
                                                 addToCart={addToCart}
                                                 id={54}
                                             />
