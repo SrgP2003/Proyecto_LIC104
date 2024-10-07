@@ -1,14 +1,17 @@
 import "../assets/css/Menu.css"
 import { MenuItem } from "../components/MenuTools"
 import { MenuSection } from "../components/MenuTools"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
+import { useNavigate } from "react-router-dom"
 import FooterN from "../components/footer"
 import HeaderNav from "../components/HeaderNav"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.js"
 
+
 /*Imagenes para cada seccion */
 import Pasta from "../assets/images/Pasta.png"
-/*Imagenes para seccion pizzas*/
 import margarita from "../assets/images/margarita.png"
 import vegana from "../assets/images/vegana.png"
 import pepperoni from "../assets/images/pepperoni.png"
@@ -33,16 +36,37 @@ import tomate from "../assets/images/tomate.png"
 import toscana from "../assets/images/toscana.png"
 import papa from "../assets/images/papa.png"
 
+import Funghi from "../assets/images/Risotto/FUNGHI.jpg"
+import Capresse from "../assets/images/Risotto/CAPRESE1.png"
+import Ossobuco from "../assets/images/Risotto/OSSOBUCO.jpg"
+import Risotto_Nero from "../assets/images/Risotto/Risotto_nero.jpg"
 
+import CanolliN from "../assets/images/Dolci/CANNOLLI.png"
+import Profiterol from "../assets/images/Dolci/PROFITEROL.JPG"
+import Piemontesa from "../assets/images/Dolci/caprese2.jpg"
+import Pannacota from "../assets/images/Dolci/PANNACOTTA.jpg"
+import PizzaNut from "../assets/images/Dolci/pizza_nutella1.png"
+import GelatoM from "../assets/images/Dolci/GELATO_MONTEROSSO.jpg"
+import Tiramisu from "../assets/images/Dolci/TIRAMISu.jpg"
 
-export function Menu() {
-    const buttonCart = <button className="btn btn-dark">Añadir al carrito</button>
+export function Menu({ addToCart }) {
+    const goToCart = useNavigate();
+    const handleClickCart = () => { goToCart("/cart") }
     return (
         <>
+        buttonCart
             <header>
                 <HeaderNav title={'Menú'} />
             </header>
-            <main>
+            <main className="main-xl-menu">
+                <div className="container-fluid container-cart">
+                    <div className="row">
+                        <button className="btn btn-success btn-lg btn-cart d-flex justify-content-center align-items-center" onClick={handleClickCart}>
+                            <FontAwesomeIcon icon={faCartShopping} size="lg" />
+                            <span className="m-1">Carrito</span>
+                        </button>
+                    </div>
+                </div>
                 {/*Seccion de ensaladas */}
                 <MenuSection titleSection={"Antipasti e insalati"} description={'Aperitivos y ensaladas'}>
                     <div id="carousel-items-dish-1" className="carousel carousel-dark slide">
@@ -66,7 +90,9 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={1}
+
                                             />
                                         </div>
                                         <div className="col-6">
@@ -76,7 +102,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'salsa boloniesa, carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={2}
                                             />
                                         </div>
                                     </div>
@@ -92,7 +119,9 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={3}
+
                                             />
                                         </div>
                                         <div className="col-6">
@@ -102,7 +131,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={4}
                                             />
                                         </div>
                                     </div>
@@ -118,7 +148,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={5}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -128,7 +159,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={6}
                                             />
                                         </div>
                                     </div>
@@ -144,7 +176,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={7}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -154,7 +187,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={8}
                                             />
                                         </div>
                                     </div>
@@ -170,7 +204,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={9}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -180,7 +215,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={10}
                                             />
                                         </div>
                                     </div>
@@ -216,9 +252,10 @@ export function Menu() {
                                                 urlImg={focaccia1}
                                                 sectionName={'Focaccia de aceitunas y tomates'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Focaccia de acietunas negas, tomates cherry, romero y aceite de oliva'}
+                                                aboutDish={'Focaccia de aceitunas negras, tomates cherry, romero y aceite de oliva'}
                                                 price={'4.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={11}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -228,7 +265,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Focaccia de mozzarella gratinado, hierbas provenzales y aceite de oliva'}
                                                 price={'5.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={12}
                                             />
                                         </div>
                                     </div>
@@ -244,7 +282,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Pane bianco con toamtes, albahaca, ajo, especias y aceite de oliva'}
                                                 price={'3.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={13}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -254,7 +293,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Pan de trigo tipico de Ferrera'}
                                                 price={'3.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={14}
                                             />
                                         </div>
                                     </div>
@@ -292,7 +332,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Sopa de ganos rojos, maccaroni, tocineta y Parmesano Reggiano'}
                                                 price={'5.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={15}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -302,7 +343,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Pregunta por la opcion de sopa del dia'}
                                                 price={'5.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={16}
                                             />
                                         </div>
                                     </div>
@@ -318,7 +360,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Con nueces tostadas, hongos, tomates cherry roastizados'}
                                                 price={'4.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={17}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -328,7 +371,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Sopa de frijoles toscanos, con rodajas de limon, Pamesano Reggiano y pan'}
                                                 price={'5.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={18}
                                             />
                                         </div>
                                     </div>
@@ -344,7 +388,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Crema de papa con tocino y cebollines'}
                                                 price={'5.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={19}
                                             />
                                         </div>
                                     </div>
@@ -386,7 +431,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, mozzarella, albahaca y aceite de oliva extra virgen.'}
                                                 price={'9.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={20}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -396,7 +442,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, tomate cherry, ajos confitados, aceitunas, champiñones, vinagreta de la casa y arugula'}
                                                 price={'9.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={21}
                                             />
                                         </div>
                                     </div>
@@ -412,7 +459,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, mozzarella, pepperoni americano'}
                                                 price={'10.50$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={22}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -422,7 +470,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Mozzarella, Parmesano Reggiano, Mascarpone, gorgonzola'}
                                                 price={'11.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={23}
                                             />
                                         </div>
                                     </div>
@@ -438,7 +487,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, ajos confitados, arugula, prosiutto, parmesano y burrata'}
                                                 price={'13.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={24}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -448,7 +498,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, mozzarella, salsiccia, pepperoni ameriano, tocineta, salami'}
                                                 price={'13.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={25}
                                             />
                                         </div>
                                     </div>
@@ -464,7 +515,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Mozzarella, camarones, mantequilla de ajo y hieras'}
                                                 price={'13.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={26}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -474,7 +526,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Mozzarella, romero fresco, porchetta con hierbas, romero'}
                                                 price={'13.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={27}
                                             />
                                         </div>
                                     </div>
@@ -490,7 +543,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Crema de hongos y fungi procini, mozzarella, crutones, Paremsano Reggiano, starciatella, aceite de trufas'}
                                                 price={'15.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={28}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -500,7 +554,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, mozzarella, arugula, prosciutto crudo, straciatella, Parmesano Reggiano'}
                                                 price={'15.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={29}
                                             />
                                         </div>
                                     </div>
@@ -516,7 +571,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Crema de Parmesano Reggiano, mozzarella fresca, tocineta"guaciale style", huevo'}
                                                 price={'13.00$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={30}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -526,7 +582,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Fritto misto di mariscos, tocino, salsiccia italiana, aceitunas kalamata, mascarpone, perejil'}
                                                 price={'18.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={31}
                                             />
                                         </div>
                                     </div>
@@ -568,7 +625,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={32}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -578,7 +636,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={33}
                                             />
                                         </div>
                                     </div>
@@ -594,7 +653,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={34}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -604,7 +664,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={35}
                                             />
                                         </div>
                                     </div>
@@ -620,7 +681,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={36}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -630,7 +692,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={37}
                                             />
                                         </div>
                                     </div>
@@ -646,7 +709,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={38}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -656,7 +720,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={39}
                                             />
                                         </div>
                                     </div>
@@ -672,7 +737,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={40}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -682,7 +748,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={41}
                                             />
                                         </div>
                                     </div>
@@ -698,7 +765,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={42}
                                             />
                                         </div>
                                         <div className="col-6">
@@ -708,7 +776,8 @@ export function Menu() {
                                                 altImg={'img-pasta'}
                                                 aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={43}
                                             />
                                         </div>
                                     </div>
@@ -740,22 +809,24 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Funghi}
+                                                sectionName={'Funghi'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Arroz arborio cremoso con hongos y parmesano Reggiano'}
+                                                price={'16$'}
+                                                addToCart={addToCart}
+                                                id={44}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Capresse}
+                                                sectionName={'Caprese'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Arroz arborio cremoso con tomates y mozzarella'}
+                                                price={'15$'}
+                                                addToCart={addToCart}
+                                                id={45}
                                             />
                                         </div>
                                     </div>
@@ -766,22 +837,24 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Ossobuco}
+                                                sectionName={'Ossobuco'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Arroz arborio cremoso con parmesano y corte de red estofado en sus jugos'}
+                                                price={'14$'}
+                                                addToCart={addToCart}
+                                                id={46}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Risotto_Nero}
+                                                sectionName={'Rissoto Nero'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Arroz arborio cremoso calamares fritos, alioli de lima y tinta de calamar'}
                                                 price={'12.99$'}
-                                                cart={buttonCart}
+                                                addToCart={addToCart}
+                                                id={47}
                                             />
                                         </div>
                                     </div>
@@ -815,22 +888,24 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={CanolliN}
+                                                sectionName={'Cannolli Nutella'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Cono crocante relleno de nutella y crema pastelera'}
+                                                price={'5$'}
+                                                addToCart={addToCart}
+                                                id={48}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Profiterol}
+                                                sectionName={'Profiterol Pistacchio'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Gelato de pistacchio, crumble de pistacchio, salsa tibia de chocolate blanco y pistacchio'}
+                                                price={'11$'}
+                                                addToCart={addToCart}
+                                                id={49}
                                             />
                                         </div>
                                     </div>
@@ -841,22 +916,24 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Piemontesa}
+                                                sectionName={'Torta Piemontesa'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Torta de chocolate, avellanas, ganache de gianduia'}
+                                                price={'9$'}
+                                                addToCart={addToCart}
+                                                id={50}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Pannacota}
+                                                sectionName={'Pannacota de frutos rojos'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Flan italiano de crema de leche con frutos rojos'}
+                                                price={'6$'}
+                                                addToCart={addToCart}
+                                                id={51}
                                             />
                                         </div>
                                     </div>
@@ -867,22 +944,24 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={PizzaNut}
+                                                sectionName={'Pizza de nutella'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Masa de cacao cons marshmallow, ricotta dulce y tierra de oreo'}
+                                                price={'7$'}
+                                                addToCart={addToCart}
+                                                id={52}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={GelatoM}
+                                                sectionName={'Gelato Monterosso'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Helado hecho en casa de nocciola y nutella, panna, galleta de barquilla hecha en casa'}
+                                                price={'8$'}
+                                                addToCart={addToCart}
+                                                id={53}
                                             />
                                         </div>
                                     </div>
@@ -893,12 +972,13 @@ export function Menu() {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={Tiramisu}
+                                                sectionName={'Tiramisú'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
-                                                cart={buttonCart}
+                                                aboutDish={'Tradicional dulce de soletillas con café, cacao y mascarpone'}
+                                                price={'6$'}
+                                                addToCart={addToCart}
+                                                id={54}
                                             />
                                         </div>
                                     </div>

@@ -28,7 +28,7 @@ export function HomePage() {
                                 de platillos diseñados y perfeccionados por manos 100%
                                 italianas</p>
                             <div className="div-md-btn">
-                                <button onClick={handleClick} className="btn btn-menu btn-dark btn-lg">Ver el menú</button>
+                                <button onClick={handleClick} className="btn btn-menu btn-light btn-lg">Ver el menú</button>
                             </div>
                         </article>
                     </section>

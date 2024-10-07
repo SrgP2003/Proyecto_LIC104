@@ -1,0 +1,14 @@
+.li-cartItems{
+    list-style-type: upper-roman;
+}
+.tag-total-price, .total-price{
+    font-size: 1.6em;
+}
+.just-zero-div{
+    padding: 18vh;
+}
+@media (max-width: 320px){
+    strong, .span-xs-info{
+        font-size: .9em;
+    }
+}

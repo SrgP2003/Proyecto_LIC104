@@ -14,7 +14,7 @@
     user-select: none;
     color: black;
 }
-.card:active {
+.card-md-section:active {
     transform: scale(0.98);
 }
 .img-dish{
@@ -35,6 +35,15 @@
     font-family: 'Whisper';
     font-size: 1.9em;
     font-weight: bold;
+}
+.num-md-item{
+    font-size: 1.4em;
+}
+#popover-succed{
+    width: 10em;
+    border: 1px solid rgb(0, 0, 0);
+    font-family: 'Lucida Sans';
+    z-index: 0;
 }
 
 @media(max-width: 768px){
