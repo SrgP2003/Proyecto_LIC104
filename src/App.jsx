@@ -6,6 +6,7 @@ import { Contact } from "./pages/Contact";
 import PaymentMethods from "./components/Payment";
 import Cart from "./components/Cart"
 import { useState, useEffect } from "react";
+import PaymentConfirmation from "./components/PaymentConfirm";
 
 export default function App() {
     //Estado del carrito
@@ -75,6 +76,7 @@ export default function App() {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/cart" element={<Cart cart={cart} removeItem={handleRemoveItem} removeAll={handleRemoveAll} totalPrice={totalPrice} convertPrice={convertPrice} />} />
                     <Route path="/payment" element={<PaymentMethods cart={cart} totalPrice={totalPrice} />} />
+                    <Route path="/payment-confirmation" element={<PaymentConfirmation/>} />
                 </Routes>
             </Router>
         </>
