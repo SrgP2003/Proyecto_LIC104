@@ -1,3 +1,7 @@
+.main-xl-cart{
+    margin-top: 3rem;
+}
+
 .carousel-control-prev, .carousel-control-next{
     height: 65%;
 }
@@ -9,4 +13,7 @@
     top: 5em;
     position: sticky;
     z-index: 5;
+}
+.container-cart button{
+    height: 2.4em;
 }

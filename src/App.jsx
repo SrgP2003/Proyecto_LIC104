@@ -4,7 +4,7 @@ import { Menu } from "./pages/Menu";
 import { About } from "./pages/About";
 import { Contact } from "./pages/Contact";
 import PaymentMethods from "./components/Payment";
-import Cart from "./components/cart";
+import Cart from "./components/Cart"
 import { useState, useEffect } from "react";
 
 export default function App() {
@@ -74,7 +74,7 @@ export default function App() {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/cart" element={<Cart cart={cart} removeItem={handleRemoveItem} removeAll={handleRemoveAll} totalPrice={totalPrice} convertPrice={convertPrice} />} />
-                    <Route path="/payment" element={<PaymentMethods cart={cart} convertPrice={convertPrice} totalPrice={totalPrice} />} />
+                    <Route path="/payment" element={<PaymentMethods cart={cart} totalPrice={totalPrice} />} />
                 </Routes>
             </Router>
         </>

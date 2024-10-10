@@ -1,9 +1,21 @@
-.row-payment{
-    font-size: 1.5em;
+.col-payment{
+    font-size: 1.1em;
 }
 .row-btn-payment{
     display: flex;
     flex-direction: row;
+}
+.main-xl-payment, .col-xl-payment{
+    margin: 3rem 0;
+}
+.strong-isActive{
+    color: green;
+}
+.strong-isInactive{
+    color: red;
+}
+.form-payment-method, .btn-save-info{
+    display: none;
 }
 @media(max-width: 344px){
     .row-payment{

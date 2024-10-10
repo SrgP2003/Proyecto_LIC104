@@ -15,7 +15,7 @@ export default function Cart({ cart, removeItem, removeAll, totalPrice, convertP
             <header>
                 <HeaderNav title={'Carrito'} />
             </header>
-            <main>
+            <main className="main-xl-cart">
                 <section className="container">
                     <article className="card m-3">
                         {cart.length === 0 ?
@@ -36,9 +36,10 @@ export default function Cart({ cart, removeItem, removeAll, totalPrice, convertP
                             </> :
                             <ul>
                                 <div className="row">
-                                    <div className="col-12 m-3">
+                                    <div className="col-12 mt-3 mb-3">
                                         <button className="btn btn-outline-dark" onClick={handleClickReturn}>
                                             <FontAwesomeIcon icon={faArrowLeft} size="lg" />
+                                            <span className="m-3">Volver al menú</span>
                                         </button>
                                     </div>
                                 </div>
