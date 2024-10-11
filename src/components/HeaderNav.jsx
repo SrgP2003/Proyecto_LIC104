@@ -7,7 +7,8 @@ export default function HeaderNav({ title }) {
     const navigateHeader = useNavigate();
     const handleClickInicio = () => { navigateHeader("/") }
     const handleClickAbout = () => { navigateHeader("/about") }
-    const handleClickContact = () => { navigateHeader("/contact") }
+    const handleClickMenu = () => { navigateHeader("/menu") }
+
     return (
         <>
             <div className="container headerNav-container">
@@ -17,7 +18,7 @@ export default function HeaderNav({ title }) {
                         <button className="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon"></span>
                         </button>
-                        <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                        <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasDarkNavbar" data-bs-scroll="true" aria-labelledby="offcanvasDarkNavbarLabel">
                             <div className="offcanvas-header">
                                 <img src={logoAdare} alt="logoAdare" />
                                 <button type="button" className="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -31,7 +32,7 @@ export default function HeaderNav({ title }) {
                                         <a className="nav-link active nav-link-head" onClick={handleClickAbout}>¿Quiénes Somos?</a>
                                     </li>
                                     <li className="nav-item">
-                                        <a className="nav-link active nav-link-head" onClick={handleClickContact}>Contacto</a>
+                                        <a className="nav-link active nav-link-head" onClick={handleClickMenu}>Ver el menú</a>
                                     </li>
                                 </ul>
                             </div>

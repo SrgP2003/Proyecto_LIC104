@@ -2,11 +2,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/Home";
 import { Menu } from "./pages/Menu";
 import { About } from "./pages/About";
-import { Contact } from "./pages/Contact";
 import PaymentMethods from "./components/Payment";
 import Cart from "./components/Cart"
 import { useState, useEffect } from "react";
-import PaymentConfirmation from "./components/PaymentConfirm";
+import { PaymentConfirmation, PaymentConfirmation2 } from "./components/PaymentConfirm";
 
 export default function App() {
     //Estado del carrito
@@ -73,10 +72,10 @@ export default function App() {
                     <Route path="/" element={<HomePage />} />
                     <Route path="/menu" element={<Menu addToCart={agregarCart} />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
                     <Route path="/cart" element={<Cart cart={cart} removeItem={handleRemoveItem} removeAll={handleRemoveAll} totalPrice={totalPrice} convertPrice={convertPrice} />} />
-                    <Route path="/payment" element={<PaymentMethods cart={cart} totalPrice={totalPrice} />} />
+                    <Route path="/payment" element={<PaymentMethods cart={cart} totalPrice={totalPrice} removeItems = {handleRemoveAll}/>} />
                     <Route path="/payment-confirmation" element={<PaymentConfirmation/>} />
+                    <Route path="/payment-confirmation-online" element={<PaymentConfirmation2/>} />
                 </Routes>
             </Router>
         </>

@@ -20,7 +20,7 @@ export default function Cart({ cart, removeItem, removeAll, totalPrice, convertP
                     <article className="card m-3">
                         {cart.length === 0 ?
                             <>
-                                <div className="card-header d-flex justify-content-center">
+                                <div className="card-header d-flex justify-content-center text-center">
                                     <h4 className="h4">El carrito está actualmente vacío</h4>
                                 </div>
                                 <div className="cardBody">

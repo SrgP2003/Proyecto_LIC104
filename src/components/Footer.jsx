@@ -4,7 +4,8 @@ export default function FooterN() {
     return (
         <>
             <footer className="footer-lg container-fluid text-center">
-                <p>&copy; Todos los derechos reservados</p>
+                <p className="display-6">Adaré restaurant</p>
+                <small>&copy; Todos los derechos reservados</small>
             </footer>
         </>
     )

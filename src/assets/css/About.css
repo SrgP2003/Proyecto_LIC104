@@ -1,0 +1,14 @@
+.article-about{
+    margin-top: 3rem;
+}
+.col-about{
+    font-size: 1.5em;
+    font-family: 'Lucida-Sans';
+    display: flex;
+    align-items: center;
+    text-align: justify;
+}
+.img-xl-banner{
+    position: relative;
+    border-radius: 10px;
+}

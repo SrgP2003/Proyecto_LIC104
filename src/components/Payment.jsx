@@ -6,11 +6,12 @@ import FooterN from "./footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons/faArrowLeft";
 
-export default function PaymentMethods({ cart, totalPrice }) {
+export default function PaymentMethods({ cart, totalPrice, removeItems }) {
     const [paymentMethod, setPaymentMethod] = useState("form-payment-method"); //state para abrir formularios de metodos de pago
     const [isActive, setIsActive] = useState("INACTIVO"); //state para determinar si el formulario de pago en linea esta activo
     const [isActiveStyle, setIsActiveStyle] = useState("strong-isInactive"); //state para cambiar de color el texto del estado de pago en linea
     const [isDisabled, setIsDisabled] = useState("btn btn-info"); //state que controla donde aparecera el boton dependiendo si es pago en linea o en el lugar
+    const [spinnerOn, setSpinnerOn] = useState("spinner-border mt-3");
 
     //states para capturar el valor ingresado en cada campo
     const [name, setName] = useState("");
@@ -21,15 +22,27 @@ export default function PaymentMethods({ cart, totalPrice }) {
     const [yearEx, setYearEx] = useState("");
     const [cvN, setCvN] = useState("");
 
-    const navigateCofirmationPay = useNavigate(); //Navegacion hacia componente de confirmacion de pago
-    const navigateToConfirm = () => {navigateCofirmationPay("/payment-confirmation")} //Funcion para navegar al componente de confirmacion de pago
+    const returnPrev = useNavigate(); //Navegacion hacia el carrito o las confirmaciones de pago
+    const removeAfterPay = () => { //Funcion para eliminar el carrito despues de pagar
+        return cart.map(({ id }) => {
+            removeItems(id);
+        })
+    }
+    const navigateToConfirm = () => { //Funcion para navegar al componente de confirmacion de pago en el lugar
+        returnPrev("/payment-confirmation");
+        removeAfterPay();
+    }
+    const navigateToConfirm2 = () => { //Funcion para navegar al componente de confirmacion de pago en linea 
+        returnPrev("/payment-confirmation-online");
+        removeAfterPay();
+    }
     const clearOnPlaceForm = () => {
         //Funcion que limpia los campos del formulario de pago en el lugar
         setName("");
         setEmail("");
         setPhoneN("");
     };
-    const validationOnPlaceForm = () => {
+    const validationOnPlaceForm = () => { //Validaciones para pago en el lugar
         return name == "" || email == "" || phoneN == ""
             ? alert(
                 `Uno o más campos no se han completado. Por favor, rellenar con la información solicitada`
@@ -38,7 +51,7 @@ export default function PaymentMethods({ cart, totalPrice }) {
                 ? alert("El número de teléfono es inválido o posee el formato incorrecto")
                 : navigateToConfirm();
     };
-    const validationOnlineForm = () => {
+    const validationOnlineForm = () => { //Validaciones para pago en linea
         return name == "" ||
             email == "" ||
             phoneN == "" ||
@@ -59,7 +72,7 @@ export default function PaymentMethods({ cart, totalPrice }) {
                             ? alert("El año debe ser ingresado en formato de 4 dígitos")
                             : !/^[0-9]{3}$/.test(cvN)
                                 ? alert("El CV ingresado no es válido")
-                                : navigateToConfirm();
+                                : navigateToConfirm2();
     };
     const handleClickRequestOnPlace = () => {
         validationOnPlaceForm();
@@ -89,7 +102,6 @@ export default function PaymentMethods({ cart, totalPrice }) {
         setIsActiveStyle("strong-isActive");
         setIsDisabled("btn-save-info");
     };
-    const returnPrev = useNavigate(); //Navegacion hacia el carrito
     const handleClickReturn = () => {
         returnPrev("/cart");
     };
@@ -184,7 +196,7 @@ export default function PaymentMethods({ cart, totalPrice }) {
                                             Por favor, introducir la siguiente información personal
                                             para la toma de su orden a continuación.
                                         </p>
-                                        <form onSubmit={handleSubmit} className="needs-validation" noValidate>
+                                        <form onSubmit={handleSubmit}>
                                             <div className="mb-3 form-floating">
                                                 <input
                                                     type="text"
@@ -228,7 +240,7 @@ export default function PaymentMethods({ cart, totalPrice }) {
                                                 </div>
                                                 <label htmlFor="telefono">Número de teléfono</label>
                                                 <p className="form-text">
-                                                    Formato de número de teléfono válido: 0000-0000
+                                                    Formato de número de teléfono válido: 0000 0000
                                                 </p>
                                             </div>
                                             <div className="mb-">
@@ -269,8 +281,7 @@ export default function PaymentMethods({ cart, totalPrice }) {
                                                     ></input>
                                                     <label htmlFor="cardN">Número de la tarjeta</label>
                                                     <p className="form-text">
-                                                        Formato de número de tarjeta válido: 0000 0000 0000
-                                                        0000
+                                                        Formato de número de tarjeta válido: 0000 0000 0000 0000
                                                     </p>
                                                 </div>
                                                 <div className="expiration-date d-flex">
@@ -325,12 +336,14 @@ export default function PaymentMethods({ cart, totalPrice }) {
                                                     </p>
                                                 </div>
                                                 <div className="mb-3">
-                                                    <input
-                                                        type="submit"
-                                                        className="btn btn-success"
-                                                        value={"Realizar pago"}
-                                                        onClick={handleClickRequestOnline}
-                                                    ></input>
+                                                    <div>
+                                                        <input
+                                                            type="submit"
+                                                            className="btn btn-success"
+                                                            value={"Realizar pago"}
+                                                            onClick={handleClickRequestOnline}
+                                                        ></input>
+                                                    </div>
                                                 </div>
                                             </form>
                                         </div>
