@@ -48,6 +48,36 @@ import Pannacota from "../assets/images/Dolci/PANNACOTTA.jpg"
 import PizzaNut from "../assets/images/Dolci/pizza_nutella1.png"
 import GelatoM from "../assets/images/Dolci/GELATO_MONTEROSSO.jpg"
 import Tiramisu from "../assets/images/Dolci/TIRAMISu.jpg"
+/*Imagenes para sección de pastas*/
+import quesopimienta from "../assets/images/Pasta/BUCATINI CACIO E PEPE.png"
+import camaronesajo from "../assets/images/Pasta/FETUCCINI AGLIO, OLIO E GAMBERETTI.png"
+import pesto from "../assets/images/Pasta/GNOCCHI AL PESTO RÚSTICO.png"
+import sorrentina from "../assets/images/Pasta/GNOCCHI ALLA SORRENTINA.png"
+import lbolognesa from "../assets/images/Pasta/LASAGNA BOLOGNESA.png"
+import porcini from "../assets/images/Pasta/GNOCCHI PORCINI.png"
+import lpomodoro from "../assets/images/Pasta/LINGUINI AL FILETTO DI POMODORO.png"
+import cozze from "../assets/images/Pasta/LINGUINI COZZE.png"
+import lmare from "../assets/images/Pasta/LINGUINI FRUTTO DI MARE.png"
+import bosco from "../assets/images/Pasta/MEZZALUNA BOSCO.png"
+import pbolognesa from "../assets/images/Pasta/PACCHERI ALLA BOLOGNESA.png"
+import diabola from "../assets/images/Pasta/PASTA ALLA SPICY VODKA.png"
+
+
+/*Imagenes para sección de ensaladas*/
+import caprese from "../assets/images/Insalata/Caprese.png"
+import dedosqueso from "../assets/images/Insalata/MozzarelaCa.png"
+import riso from "../assets/images/Insalata/Riso.png"
+import cesar from "../assets/images/Insalata/cesar.png"
+import carman from "../assets/images/Insalata/carman.png"
+import carpul from "../assets/images/Insalata/carpul.png"
+import cozzee from "../assets/images/Insalata/cazz.png"
+import polen from "../assets/images/Insalata/polen.png"
+import melan from "../assets/images/Insalata/mel.png"
+import fmisto from "../assets/images/Insalata/mis.png"
+
+
+
+
 
 export function Menu({ addToCart }) {
     const goToCart = useNavigate();
@@ -85,11 +115,11 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={caprese}
+                                                sectionName={'INSALATA CAPRESE'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Ensalada a base de tomate y queso mozzarella fresco, con aceite de oliva.'}
+                                                price={'9$'}
                                                 addToCart={addToCart}
                                                 id={1}
 
@@ -97,11 +127,11 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales y anchoas'}
+                                                urlImg={dedosqueso}
+                                                sectionName={'MOZZARELLA IN CARROZZA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'salsa boloniesa, carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Triangulos de mozzarella derretida empanizados acompañados de salsa roja.'}
+                                                price={'8$'}
                                                 addToCart={addToCart}
                                                 id={2}
                                             />
@@ -114,11 +144,11 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={riso}
+                                                sectionName={'RISO AL SALTO'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Rissotto crocante acompañado de tocino y queso.'}
+                                                price={'9$'}
                                                 addToCart={addToCart}
                                                 id={3}
 
@@ -126,11 +156,11 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={cesar}
+                                                sectionName={'INSALATA CESARE'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Ensalada con mezcla de lechugas y una delicioso y jugosa pechuga de pollo ademas su aderezo caracteristico.'}
+                                                price={'9$'}
                                                 addToCart={addToCart}
                                                 id={4}
                                             />
@@ -143,22 +173,22 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={carman}
+                                                sectionName={'CARPACCIO DI MANZO '}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Carpaccio de carne de res, aderezado con nuestra salsa especial.'}
+                                                price={'10$'}
                                                 addToCart={addToCart}
                                                 id={5}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={carpul}
+                                                sectionName={'CARPACCIO DI POLPO '}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Carpaccio hecho de pulpo fresco con toques dulces y acidos.'}
+                                                price={'18$'}
                                                 addToCart={addToCart}
                                                 id={6}
                                             />
@@ -171,22 +201,22 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={cozzee}
+                                                sectionName={'COZZE'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Mejillones salteados'}
+                                                price={'15$'}
                                                 addToCart={addToCart}
                                                 id={7}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={polen}
+                                                sectionName={'POLENTA FRITTA CON AIOLI'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Nuestra deliciosa polenta crocante acompañada de queso parmesano.'}
+                                                price={'9$'}
                                                 addToCart={addToCart}
                                                 id={8}
                                             />
@@ -199,22 +229,22 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={melan}
+                                                sectionName={'MELANZANE ALLA PARMIGIANA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Laminas de berenjena con queso mozzarella, tomate napolitano y pecorino romano.'}
+                                                price={'7$'}
                                                 addToCart={addToCart}
                                                 id={9}
                                             />
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={fmisto}
+                                                sectionName={'FRITTO MISTO '}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
-                                                price={'12.99$'}
+                                                aboutDish={'Camarones, calamares y pulpo crocantes.'}
+                                                price={'14$'}
                                                 addToCart={addToCart}
                                                 id={10}
                                             />
@@ -620,10 +650,10 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={quesopimienta}
+                                                sectionName={'BUCATINI CACIO E PEPE'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Basca bucatini con salsa de queso y pimienta.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={32}
@@ -631,10 +661,10 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={camaronesajo}
+                                                sectionName={'FETUCCINI AGLIO, OLIO E GAMBERETTI'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Fetuccini al ajillo con camarones.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={33}
@@ -648,10 +678,10 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={pesto}
+                                                sectionName={'GNOCCHI AL PESTO RÚSTICO'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Pasta a base de papa acompañada de una exquisita salsa pesto.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={34}
@@ -659,10 +689,10 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={sorrentina}
+                                                sectionName={'GNOCCHI ALLA SORRENTINA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Deliciosa pasta a base de papa con salsa roja al horno.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={35}
@@ -676,10 +706,10 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={lbolognesa}
+                                                sectionName={'LASAGNA BOLOGNESA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Lasagna en salsa roja con carne molida.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={36}
@@ -687,10 +717,10 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={porcini}
+                                                sectionName={'GNOCCHI PORCINI'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Gnoquis a base de papa salteados y acompañados con deliciosos hongos porcini'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={37}
@@ -704,10 +734,10 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={lpomodoro}
+                                                sectionName={'LASAGNA POMODORO'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Lasagna de salsa de tomates, una opcion vegetariana.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={38}
@@ -715,10 +745,10 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={cozze}
+                                                sectionName={'LINGUINI COZZE'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Pasta Linguini salteada con deliciosos y frescos mejillones.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={39}
@@ -732,10 +762,10 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={lmare}
+                                                sectionName={'LINGUINI AL FRUTI DI MARE'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Deliciosa pasta linguini acompañada de nuestra salsa de mariscos salteados.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={40}
@@ -743,10 +773,10 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={bosco}
+                                                sectionName={'MEZZALUNA BOSCO'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Deliciosa pasta corta con salsa roja de hongos frescos.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={41}
@@ -760,10 +790,10 @@ export function Menu({ addToCart }) {
                                     <div className="row">
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={pbolognesa}
+                                                sectionName={'PACCHERI ALLA BOLOGNESA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Pasta corta acompañada de nuestra famosa salsa boloñesa.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={42}
@@ -771,10 +801,10 @@ export function Menu({ addToCart }) {
                                         </div>
                                         <div className="col-6">
                                             <MenuItem
-                                                urlImg={Pasta}
-                                                sectionName={'Pasta gratinada con vegetales'}
+                                                urlImg={diabola}
+                                                sectionName={'PASTA ALLA SPICY VODKA'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'carne al pastor, tomates, cebollas y un cuarto de frutos secos'}
+                                                aboutDish={'Pasa de su preferencia acompañada de nuestra salsa rosa a base de chiles.'}
                                                 price={'12.99$'}
                                                 addToCart={addToCart}
                                                 id={43}
