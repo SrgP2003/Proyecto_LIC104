@@ -7,6 +7,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons"
 import { faMinus } from "@fortawesome/free-solid-svg-icons"
 import { useState } from "react"
 
+//Componente para representar cada item de las secciones del menu
 export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, addToCart }) {
     const [cantidad, setCantidad] = useState(0);
     const [show, setShow] = useState(false);
@@ -19,7 +20,7 @@ export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, ad
         (cantidad < 1) ? setCantidad(cantidad * 0) : setCantidad(cantidad - 1) //Funcion para decrementar platillo
     }
 
-    const handleAddToCart = (e) => {
+    const handleAddToCart = (e) => { //Logica: si el usuario elige un item, se añade un objeto para el carrito
         if (cantidad > 0) {
             const item = {
                 id,
@@ -33,10 +34,11 @@ export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, ad
             setTarget(e.target);
         }
     }
-    const clickAfuera = () => {
+    const clickAfuera = () => { //Logica para el mensaje de confirmacion al agregar un item al carrito
         setShow(false);
     }
-    const popoverShow = (
+    //Funcion para dar a conocer confirmacion de item agregado al carrito
+    const popoverShow = ( 
         <Popover id="popover-succed">
             <Popover.Body className="text-center">
                 Los productos se han agregado correctamente al carrito.
@@ -90,7 +92,7 @@ export function MenuItem({ id, urlImg, altImg, sectionName, aboutDish, price, ad
         </section>
     )
 }
-
+//Componente para representar cada seccion del menu
 export function MenuSection({ titleSection, children, description }) {
     return (
         <>

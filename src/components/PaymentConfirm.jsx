@@ -36,7 +36,7 @@ export function PaymentConfirmation2() {
     const navigateMenu = useNavigate(); //Hook de navegacion para volver al menu
     const returnToMenu = () => { navigateMenu("/menu") } //Funcion para volver al menu
     let dateTransact = new Date();
-    let currentDate = `${dateTransact.getDate()}/${dateTransact.getMonth() + 1}/${dateTransact.getFullYear()}`;
+    let currentDate = `${dateTransact.getDate()}/${dateTransact.getMonth() + 1}/${dateTransact.getFullYear()} | ${dateTransact.getHours()}:${dateTransact.getMinutes()}`;
     return (
         <>
             <header>
@@ -49,7 +49,7 @@ export function PaymentConfirmation2() {
                         <div className="card-body">
                             <div className="row">
                                 <div className="col-sm-12 col-lg-6">
-                                    <p><strong>Fecha:</strong></p>
+                                    <p><strong>Fecha y hora:</strong></p>
                                     <p>{currentDate}</p>
                                 </div>
                                 <div className="col-sm-12 col-lg-6">

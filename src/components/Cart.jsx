@@ -7,9 +7,9 @@ import { faCreditCard } from "@fortawesome/free-solid-svg-icons";
 import FooterN from "./footer";
 
 export default function Cart({ cart, removeItem, removeAll, totalPrice, convertPrice }) {
-    const returnP = useNavigate();
-    const handleClickReturn = () => { returnP('/menu') }
-    const handlePayment = () => { returnP('/payment') }
+    const returnP = useNavigate(); //hook para navegacion entre componentes
+    const handleClickReturn = () => { returnP('/menu') } //Navegacion hacia el menu
+    const handlePayment = () => { returnP('/payment') } //Navegacion hacia zona de pago
     return (
         <>
             <header>
@@ -18,6 +18,7 @@ export default function Cart({ cart, removeItem, removeAll, totalPrice, convertP
             <main className="main-xl-cart">
                 <section className="container">
                     <article className="card m-3">
+                    {/* Si no hay nada en el carrito, se muestra diseño para regresar al menu e indicar el inicio de una orden */}
                         {cart.length === 0 ?
                             <>
                                 <div className="card-header d-flex justify-content-center text-center">
@@ -33,6 +34,7 @@ export default function Cart({ cart, removeItem, removeAll, totalPrice, convertP
                                 <div className="p-1 d-flex justify-content-center">
                                     <button className="btn btn-info btn-lg w-50" onClick={handleClickReturn}>Agrega tu primer producto</button>
                                 </div>
+                               {/*  Si hay items agregados en el carrito, se muestra el resumen de lo ordenado */}
                             </> :
                             <ul>
                                 <div className="row">
@@ -99,6 +101,7 @@ export default function Cart({ cart, removeItem, removeAll, totalPrice, convertP
                                 </div>
                             </ul>}
                     </article>
+                    {/* Al haber una orden, se puede navegar hacia la zona de pago */}
                     {cart.length > 0
                         ?
                         <article className="container">

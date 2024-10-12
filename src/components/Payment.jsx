@@ -68,11 +68,13 @@ export default function PaymentMethods({ cart, totalPrice, removeItems }) {
                     ? alert("El número de tarjeta ingresado no es válido")
                     : !/^[0-9]{2}$/.test(monthEx)
                         ? alert("El mes debe ser ingresado en formato de 2 dígitos")
-                        : !/^[0-9]{4}$/.test(yearEx)
-                            ? alert("El año debe ser ingresado en formato de 4 dígitos")
-                            : !/^[0-9]{3}$/.test(cvN)
-                                ? alert("El CV ingresado no es válido")
-                                : navigateToConfirm2();
+                        : (monthEx < 1 || monthEx > 12)
+                            ? alert('El mes ingresado no es válido')
+                            : !/^[0-9]{4}$/.test(yearEx)
+                                ? alert("El año debe ser ingresado en formato de 4 dígitos")
+                                : !/^[0-9]{3}$/.test(cvN)
+                                    ? alert("El CV ingresado no es válido")
+                                    : navigateToConfirm2();
     };
     const handleClickRequestOnPlace = () => {
         validationOnPlaceForm();

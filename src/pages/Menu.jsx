@@ -8,39 +8,36 @@ import FooterN from "../components/footer"
 import HeaderNav from "../components/HeaderNav"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.js"
-
-
-/*Imagenes para cada seccion */
-import Pasta from "../assets/images/Pasta.png"
-import margarita from "../assets/images/margarita.png"
-import vegana from "../assets/images/vegana.png"
-import pepperoni from "../assets/images/pepperoni.png"
-import queso from "../assets/images/queso.png"
-import burrata from "../assets/images/burrata.png"
-import carnivor from "../assets/images/carnivor.png"
-import porcheta from "../assets/images/porcheta.png"
-import camarones from "../assets/images/camarones.png"
-import italiosa from "../assets/images/italiosa.png"
-import Imperiale from "../assets/images/Imperiale.png"
-import carbonara from "../assets/images/carbonara.png"
-import diavola from "../assets/images/diavola.png"
+/*Imagenes para seccion pizzas */
+import margarita from "../assets/images/Pizzas/margarita.png"
+import vegana from "../assets/images/Pizzas/vegana.png"
+import pepperoni from "../assets/images/Pizzas/pepperoni.png"
+import queso from "../assets/images/Pizzas/queso.png"
+import burrata from "../assets/images/Pizzas/burrata.png"
+import carnivor from "../assets/images/Pizzas/carnivor.png"
+import porcheta from "../assets/images/Pizzas/porcheta.png"
+import camarones from "../assets/images/Pizzas/camarones.png"
+import italiosa from "../assets/images/Pizzas/italiosa.png"
+import Imperiale from "../assets/images/Pizzas/Imperiale.png"
+import carbonara from "../assets/images/Pizzas/carbonara.png"
+import diavola from "../assets/images/Pizzas/diavola.png"
 /*Imagenes para seccion Panes*/
-import focaccia1 from "../assets/images/focaccia-1.png"
-import focaccia2 from "../assets/images/focaccia-2.png"
-import blanco from "../assets/images/blanco.png"
-import ciupeta from "../assets/images/ciupeta.png"
+import focaccia1 from "../assets/images/Pane/focaccia-1.png"
+import focaccia2 from "../assets/images/Pane/focaccia-2.png"
+import blanco from "../assets/images/Pane/blanco.png"
+import ciupeta from "../assets/images/Pane/ciupeta.png"
 /*Imagenes para seccion sopas*/
-import Minestrone from "../assets/images/Minestrone.png"
-import Raffaelo from "../assets/images/Raffaello.png"
-import tomate from "../assets/images/tomate.png"
-import toscana from "../assets/images/toscana.png"
-import papa from "../assets/images/papa.png"
-
+import Minestrone from "../assets/images/Zuppe/Minestrone.png"
+import Raffaelo from "../assets/images/Zuppe/Raffaello.png"
+import tomate from "../assets/images/Zuppe/tomate.png"
+import toscana from "../assets/images/Zuppe/toscana.png"
+import papa from "../assets/images/Zuppe/papa.png"
+/* Imagenes para seccion Risotto */
 import Funghi from "../assets/images/Risotto/FUNGHI.jpg"
 import Capresse from "../assets/images/Risotto/CAPRESE1.png"
 import Ossobuco from "../assets/images/Risotto/OSSOBUCO.jpg"
 import Risotto_Nero from "../assets/images/Risotto/Risotto_nero.jpg"
-
+/* Imagenes para seccion Dolci */
 import CanolliN from "../assets/images/Dolci/CANNOLLI.png"
 import Profiterol from "../assets/images/Dolci/PROFITEROL.JPG"
 import Piemontesa from "../assets/images/Dolci/caprese2.jpg"
@@ -61,8 +58,6 @@ import lmare from "../assets/images/Pasta/LINGUINI FRUTTO DI MARE.png"
 import bosco from "../assets/images/Pasta/MEZZALUNA BOSCO.png"
 import pbolognesa from "../assets/images/Pasta/PACCHERI ALLA BOLOGNESA.png"
 import diabola from "../assets/images/Pasta/PASTA ALLA SPICY VODKA.png"
-
-
 /*Imagenes para sección de ensaladas*/
 import caprese from "../assets/images/Insalata/Caprese.png"
 import dedosqueso from "../assets/images/Insalata/MozzarelaCa.png"
@@ -75,16 +70,11 @@ import polen from "../assets/images/Insalata/polen.png"
 import melan from "../assets/images/Insalata/mel.png"
 import fmisto from "../assets/images/Insalata/mis.png"
 
-
-
-
-
 export function Menu({ addToCart }) {
     const goToCart = useNavigate();
     const handleClickCart = () => { goToCart("/cart") }
     return (
         <>
-        buttonCart
             <header>
                 <HeaderNav title={'Menú'} />
             </header>
@@ -116,9 +106,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={caprese}
-                                                sectionName={'INSALATA CAPRESE'}
+                                                sectionName={'Insalata Caprese'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Ensalada a base de tomate y queso mozzarella fresco, con aceite de oliva.'}
+                                                aboutDish={'Ensalada a base de tomate y queso mozzarella fresco, con aceite de oliva'}
                                                 price={'9$'}
                                                 addToCart={addToCart}
                                                 id={1}
@@ -128,9 +118,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={dedosqueso}
-                                                sectionName={'MOZZARELLA IN CARROZZA'}
+                                                sectionName={'Mozzarella in Carrozza'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Triangulos de mozzarella derretida empanizados acompañados de salsa roja.'}
+                                                aboutDish={'Triángulos de mozzarella derretida empanizados acompañados de salsa roja'}
                                                 price={'8$'}
                                                 addToCart={addToCart}
                                                 id={2}
@@ -145,9 +135,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={riso}
-                                                sectionName={'RISO AL SALTO'}
+                                                sectionName={'Riso al Salto'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Rissotto crocante acompañado de tocino y queso.'}
+                                                aboutDish={'Rissotto crocante acompañado de tocino y queso'}
                                                 price={'9$'}
                                                 addToCart={addToCart}
                                                 id={3}
@@ -157,9 +147,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={cesar}
-                                                sectionName={'INSALATA CESARE'}
+                                                sectionName={'Insalata Cesare'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Ensalada con mezcla de lechugas y una delicioso y jugosa pechuga de pollo ademas su aderezo caracteristico.'}
+                                                aboutDish={'Ensalada con mezcla de lechugas y jugosa pechuga de pollo bañado en su aderezo característico'}
                                                 price={'9$'}
                                                 addToCart={addToCart}
                                                 id={4}
@@ -174,9 +164,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={carman}
-                                                sectionName={'CARPACCIO DI MANZO '}
+                                                sectionName={'Carpaccio di Manzo '}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Carpaccio de carne de res, aderezado con nuestra salsa especial.'}
+                                                aboutDish={'Lonjas de res con hongos frescos, parmesano reggiano y aderezo de albahaca'}
                                                 price={'10$'}
                                                 addToCart={addToCart}
                                                 id={5}
@@ -185,9 +175,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={carpul}
-                                                sectionName={'CARPACCIO DI POLPO '}
+                                                sectionName={'Carpaccio di Polpo '}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Carpaccio hecho de pulpo fresco con toques dulces y acidos.'}
+                                                aboutDish={'Lonjas de pulpo con aderezo cítrico, tejas de pan y limón'}
                                                 price={'18$'}
                                                 addToCart={addToCart}
                                                 id={6}
@@ -202,9 +192,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={cozzee}
-                                                sectionName={'COZZE'}
+                                                sectionName={'Cozze'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Mejillones salteados'}
+                                                aboutDish={'Mejillones en mantequilla de vino blanco, ajo y perejil'}
                                                 price={'15$'}
                                                 addToCart={addToCart}
                                                 id={7}
@@ -213,9 +203,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={polen}
-                                                sectionName={'POLENTA FRITTA CON AIOLI'}
+                                                sectionName={'Polenta Fritta con Aioli'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Nuestra deliciosa polenta crocante acompañada de queso parmesano.'}
+                                                aboutDish={'Palitos de polenta crocante con cremoso de parmesano reggiano trufado'}
                                                 price={'9$'}
                                                 addToCart={addToCart}
                                                 id={8}
@@ -230,9 +220,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={melan}
-                                                sectionName={'MELANZANE ALLA PARMIGIANA'}
+                                                sectionName={'Melanzane Alla Parmigiana'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Laminas de berenjena con queso mozzarella, tomate napolitano y pecorino romano.'}
+                                                aboutDish={'Laminas de berenjena con queso mozzarella, tomate napolitano y pecorino romano'}
                                                 price={'7$'}
                                                 addToCart={addToCart}
                                                 id={9}
@@ -241,9 +231,9 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={fmisto}
-                                                sectionName={'FRITTO MISTO '}
+                                                sectionName={'Fritto Misto'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Camarones, calamares y pulpo crocantes.'}
+                                                aboutDish={'Camarones, calamares y pulpo crocantes en salsa tártara'}
                                                 price={'14$'}
                                                 addToCart={addToCart}
                                                 id={10}
@@ -283,7 +273,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Focaccia de aceitunas y tomates'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Focaccia de aceitunas negras, tomates cherry, romero y aceite de oliva'}
-                                                price={'4.99$'}
+                                                price={'5$'}
                                                 addToCart={addToCart}
                                                 id={11}
                                             />
@@ -294,7 +284,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Focaccia de mozzarela y hierbas'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Focaccia de mozzarella gratinado, hierbas provenzales y aceite de oliva'}
-                                                price={'5.99$'}
+                                                price={'6$'}
                                                 addToCart={addToCart}
                                                 id={12}
                                             />
@@ -310,8 +300,8 @@ export function Menu({ addToCart }) {
                                                 urlImg={blanco}
                                                 sectionName={'Pane Bianco'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Pane bianco con toamtes, albahaca, ajo, especias y aceite de oliva'}
-                                                price={'3.99$'}
+                                                aboutDish={'Pane bianco con tomates, albahaca, ajo, especias y aceite de oliva'}
+                                                price={'4$'}
                                                 addToCart={addToCart}
                                                 id={13}
                                             />
@@ -321,8 +311,8 @@ export function Menu({ addToCart }) {
                                                 urlImg={ciupeta}
                                                 sectionName={'Orden de Ciupetas'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Pan de trigo tipico de Ferrera'}
-                                                price={'3.99$'}
+                                                aboutDish={'Pan de trigo típico de Ferrera'}
+                                                price={'4$'}
                                                 addToCart={addToCart}
                                                 id={14}
                                             />
@@ -358,10 +348,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={Minestrone}
-                                                sectionName={'Zuppe Minestrone'}
+                                                sectionName={'Minestrone'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Sopa de ganos rojos, maccaroni, tocineta y Parmesano Reggiano'}
-                                                price={'5.99$'}
+                                                aboutDish={'Sopa de granos rojos, maccaroni, tocineta y Parmesano Reggiano'}
+                                                price={'6$'}
                                                 addToCart={addToCart}
                                                 id={15}
                                             />
@@ -371,8 +361,8 @@ export function Menu({ addToCart }) {
                                                 urlImg={Raffaelo}
                                                 sectionName={'Zuppe del Raffaelo'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Pregunta por la opcion de sopa del dia'}
-                                                price={'5.99$'}
+                                                aboutDish={'Pregunta por la opción de sopa del dia'}
+                                                price={'5$'}
                                                 addToCart={addToCart}
                                                 id={16}
                                             />
@@ -388,8 +378,8 @@ export function Menu({ addToCart }) {
                                                 urlImg={tomate}
                                                 sectionName={'Crema de Tomate'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Con nueces tostadas, hongos, tomates cherry roastizados'}
-                                                price={'4.99$'}
+                                                aboutDish={'Sopa con nueces tostadas, hongos y tomates cherry roastizados'}
+                                                price={'6$'}
                                                 addToCart={addToCart}
                                                 id={17}
                                             />
@@ -400,7 +390,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Zuppe Toscana'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Sopa de frijoles toscanos, con rodajas de limon, Pamesano Reggiano y pan'}
-                                                price={'5.99$'}
+                                                price={'6$'}
                                                 addToCart={addToCart}
                                                 id={18}
                                             />
@@ -417,7 +407,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Crema de Papa'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Crema de papa con tocino y cebollines'}
-                                                price={'5.99$'}
+                                                price={'7$'}
                                                 addToCart={addToCart}
                                                 id={19}
                                             />
@@ -457,10 +447,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={margarita}
-                                                sectionName={'Pizza Margerita Napolitana'}
+                                                sectionName={'Pizza Margarita Napolitana'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, mozzarella, albahaca y aceite de oliva extra virgen.'}
-                                                price={'9.00$'}
+                                                price={'9$'}
                                                 addToCart={addToCart}
                                                 id={20}
                                             />
@@ -471,7 +461,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Pizza Vegana'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, tomate cherry, ajos confitados, aceitunas, champiñones, vinagreta de la casa y arugula'}
-                                                price={'9.00$'}
+                                                price={'9$'}
                                                 addToCart={addToCart}
                                                 id={21}
                                             />
@@ -488,7 +478,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'American Pepperoni'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, mozzarella, pepperoni americano'}
-                                                price={'10.50$'}
+                                                price={'10$'}
                                                 addToCart={addToCart}
                                                 id={22}
                                             />
@@ -499,7 +489,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Pizza Quattro Formaggi'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Mozzarella, Parmesano Reggiano, Mascarpone, gorgonzola'}
-                                                price={'11.00$'}
+                                                price={'11$'}
                                                 addToCart={addToCart}
                                                 id={23}
                                             />
@@ -516,7 +506,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Pizza Burrata'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, ajos confitados, arugula, prosiutto, parmesano y burrata'}
-                                                price={'13.00$'}
+                                                price={'13$'}
                                                 addToCart={addToCart}
                                                 id={24}
                                             />
@@ -527,7 +517,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Pizza Carnivor'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, mozzarella, salsiccia, pepperoni ameriano, tocineta, salami'}
-                                                price={'13.00$'}
+                                                price={'13$'}
                                                 addToCart={addToCart}
                                                 id={25}
                                             />
@@ -544,7 +534,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Pizza Camarones al Ajillo'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Mozzarella, camarones, mantequilla de ajo y hieras'}
-                                                price={'13.00$'}
+                                                price={'13$'}
                                                 addToCart={addToCart}
                                                 id={26}
                                             />
@@ -555,7 +545,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Pizza Porcheta'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Mozzarella, romero fresco, porchetta con hierbas, romero'}
-                                                price={'13.00$'}
+                                                price={'13$'}
                                                 addToCart={addToCart}
                                                 id={27}
                                             />
@@ -571,8 +561,8 @@ export function Menu({ addToCart }) {
                                                 urlImg={italiosa}
                                                 sectionName={'Extraordinaria Italiosa'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Crema de hongos y fungi procini, mozzarella, crutones, Paremsano Reggiano, starciatella, aceite de trufas'}
-                                                price={'15.00$'}
+                                                aboutDish={'Crema de hongos y fungi procini, mozzarella, crutones, Parmesano Reggiano, starciatella, aceite de trufas'}
+                                                price={'15$'}
                                                 addToCart={addToCart}
                                                 id={28}
                                             />
@@ -583,7 +573,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Extraoridnaria Imperiale'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Salsa de tomate, mozzarella, arugula, prosciutto crudo, straciatella, Parmesano Reggiano'}
-                                                price={'15.00$'}
+                                                price={'15$'}
                                                 addToCart={addToCart}
                                                 id={29}
                                             />
@@ -600,7 +590,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Extraordinaria Caronara'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Crema de Parmesano Reggiano, mozzarella fresca, tocineta"guaciale style", huevo'}
-                                                price={'13.00$'}
+                                                price={'13$'}
                                                 addToCart={addToCart}
                                                 id={30}
                                             />
@@ -611,7 +601,7 @@ export function Menu({ addToCart }) {
                                                 sectionName={'Extraordinaria Diavola Di Mare'}
                                                 altImg={'img-pasta'}
                                                 aboutDish={'Fritto misto di mariscos, tocino, salsiccia italiana, aceitunas kalamata, mascarpone, perejil'}
-                                                price={'18.99$'}
+                                                price={'19$'}
                                                 addToCart={addToCart}
                                                 id={31}
                                             />
@@ -651,10 +641,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={quesopimienta}
-                                                sectionName={'BUCATINI CACIO E PEPE'}
+                                                sectionName={'Bucatini Cacio e Pepe'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Basca bucatini con salsa de queso y pimienta.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Basca bucatini con salsa de queso y pimienta'}
+                                                price={'15$'}
                                                 addToCart={addToCart}
                                                 id={32}
                                             />
@@ -662,10 +652,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={camaronesajo}
-                                                sectionName={'FETUCCINI AGLIO, OLIO E GAMBERETTI'}
+                                                sectionName={'Fetuccini Aglio, Olio e Gamberetti'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Fetuccini al ajillo con camarones.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Pasta fetuccini al ajillo con aceite de oliva y camarones'}
+                                                price={'16$'}
                                                 addToCart={addToCart}
                                                 id={33}
                                             />
@@ -679,10 +669,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={pesto}
-                                                sectionName={'GNOCCHI AL PESTO RÚSTICO'}
+                                                sectionName={'Gnocchi al Pesto Rústico'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Pasta a base de papa acompañada de una exquisita salsa pesto.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Pasta a base de papa acompañada de una exquisita salsa pesto'}
+                                                price={'11$'}
                                                 addToCart={addToCart}
                                                 id={34}
                                             />
@@ -690,10 +680,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={sorrentina}
-                                                sectionName={'GNOCCHI ALLA SORRENTINA'}
+                                                sectionName={'Gnocchi Alla Sorrentina'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Deliciosa pasta a base de papa con salsa roja al horno.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Deliciosa pasta a base de papa con salsa roja al horno'}
+                                                price={'11$'}
                                                 addToCart={addToCart}
                                                 id={35}
                                             />
@@ -707,10 +697,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={lbolognesa}
-                                                sectionName={'LASAGNA BOLOGNESA'}
+                                                sectionName={'Lasagna Bolognesa'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Lasagna en salsa roja con carne molida.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Lasagna en salsa roja con carne molida, salsa de tomate napolitano y mozarella grtinada'}
+                                                price={'11$'}
                                                 addToCart={addToCart}
                                                 id={36}
                                             />
@@ -718,10 +708,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={porcini}
-                                                sectionName={'GNOCCHI PORCINI'}
+                                                sectionName={'Gnocchi Porcini'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Gnoquis a base de papa salteados y acompañados con deliciosos hongos porcini'}
-                                                price={'12.99$'}
+                                                aboutDish={'Gnocchi a base de papa salteados y acompañados con hongos porcini y almendras tostadas'}
+                                                price={'11$'}
                                                 addToCart={addToCart}
                                                 id={37}
                                             />
@@ -735,10 +725,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={lpomodoro}
-                                                sectionName={'LASAGNA POMODORO'}
+                                                sectionName={'Lasagna Pomodoro'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Lasagna de salsa de tomates, una opcion vegetariana.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Lasagna de salsa de tomates, una opción vegetariana'}
+                                                price={'12$'}
                                                 addToCart={addToCart}
                                                 id={38}
                                             />
@@ -746,10 +736,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={cozze}
-                                                sectionName={'LINGUINI COZZE'}
+                                                sectionName={'Linguini Cozze'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Pasta Linguini salteada con deliciosos y frescos mejillones.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Pasta Linguini salteada con deliciosos y frescos mejillones'}
+                                                price={'15$'}
                                                 addToCart={addToCart}
                                                 id={39}
                                             />
@@ -763,10 +753,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={lmare}
-                                                sectionName={'LINGUINI AL FRUTI DI MARE'}
+                                                sectionName={'Linguini al Frutto di Mare'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Deliciosa pasta linguini acompañada de nuestra salsa de mariscos salteados.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Pasta linguini acompañada de salsa de mariscos salteados, camarones, calamares, almeja, alcaparra y aceitunas'}
+                                                price={'14$'}
                                                 addToCart={addToCart}
                                                 id={40}
                                             />
@@ -774,10 +764,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={bosco}
-                                                sectionName={'MEZZALUNA BOSCO'}
+                                                sectionName={'Mezalluna Bosco'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Deliciosa pasta corta con salsa roja de hongos frescos.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Pasta corta rellena de riccota cremosa y grana padano doc en crema rosada'}
+                                                price={'13$'}
                                                 addToCart={addToCart}
                                                 id={41}
                                             />
@@ -791,10 +781,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={pbolognesa}
-                                                sectionName={'PACCHERI ALLA BOLOGNESA'}
+                                                sectionName={'Paccheri Alla Bolognesa'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Pasta corta acompañada de nuestra famosa salsa boloñesa.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Pasta corta en formato extra grande, con salsa de tomate napolitano, carne y parmesano reggiano'}
+                                                price={'13$'}
                                                 addToCart={addToCart}
                                                 id={42}
                                             />
@@ -802,10 +792,10 @@ export function Menu({ addToCart }) {
                                         <div className="col-6">
                                             <MenuItem
                                                 urlImg={diabola}
-                                                sectionName={'PASTA ALLA SPICY VODKA'}
+                                                sectionName={'Pasta Alla Spicy Vodka'}
                                                 altImg={'img-pasta'}
-                                                aboutDish={'Pasa de su preferencia acompañada de nuestra salsa rosa a base de chiles.'}
-                                                price={'12.99$'}
+                                                aboutDish={'Pasta corta, crema roja en vodka, pangratatto y pepperoncini'}
+                                                price={'11$'}
                                                 addToCart={addToCart}
                                                 id={43}
                                             />

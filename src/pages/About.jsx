@@ -10,7 +10,7 @@ export function About() {
     return (
         <>
             <header>
-                <HeaderNav title={"Acerca de Adare"} />
+                <HeaderNav title={"Acerca de Adaré"} />
             </header>
             <main className="m-3">
                 <section className="container-fluid">
