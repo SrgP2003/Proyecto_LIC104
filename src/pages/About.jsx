@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.bundle.js"
 import HeaderNav from "../components/HeaderNav"
-import banner from "../assets/images/Banner.png"
+import banner from "../assets/images/banner.png"
 import banner1 from "../assets/images/banner1.png"
 import "../assets/css/About.css"
 import FooterN from "../components/footer"
